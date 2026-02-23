@@ -1,6 +1,7 @@
 import { Image } from 'expo-image';
 import { StyleSheet } from 'react-native';
 
+import Sandbox from '@/components/animations/sandbox';
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
@@ -21,6 +22,10 @@ export default function HomeScreen() {
                 <HelloWave />
             </ThemedView>
 
+            <ThemedView style={styles.contentContainer}>
+                <Sandbox />
+            </ThemedView>
+
         </ParallaxScrollView>
     );
 }
@@ -31,9 +36,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         gap: 8,
     },
-    stepContainer: {
+    contentContainer: {
         gap: 8,
-        marginBottom: 8,
+        marginVertical: 12,
     },
     reactLogo: {
         height: 178,
