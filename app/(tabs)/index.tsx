@@ -1,9 +1,9 @@
 import { Image } from 'expo-image';
 import { StyleSheet } from 'react-native';
 
-import Sandbox from '@/components/animations/sandbox';
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
+import Sandbox from '@/components/sandbox';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 

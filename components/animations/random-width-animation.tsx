@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, View } from 'react-native';
 import Animated, { useSharedValue, withSpring } from 'react-native-reanimated';
+import { ThemedText } from '../themed-text';
 
 const RandomWidthAnimation = () => {
 
@@ -12,10 +13,11 @@ const RandomWidthAnimation = () => {
 
     return (
         <View style={{ gap: 18 }}>
+            <ThemedText type='subtitle'>Random Width Animation</ThemedText>
             <Animated.View
                 style={{
                     width,
-                    height: 100,
+                    height: 10,
                     backgroundColor: 'violet'
                 }}
             />
