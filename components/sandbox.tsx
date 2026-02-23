@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import RandomWidthAnimation from './animations/random-width-animation';
+import ShakingAnimation from './animations/shaking-animation';
 import SvgCircleAnimation from './animations/svg-circle-animation';
 import XTranslationAnimation from './animations/x-translation-animation';
 import Spacer from './spacer';
@@ -10,7 +11,8 @@ const Sandbox = () => {
     const ANIMATION_COMPONENTS = [
         RandomWidthAnimation,
         XTranslationAnimation,
-        SvgCircleAnimation
+        SvgCircleAnimation,
+        ShakingAnimation
     ]
 
     return (
