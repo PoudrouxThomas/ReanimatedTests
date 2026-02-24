@@ -1,5 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
+import CirclePanAnimation from './animations/circle-pan-animation';
+import DecayingVelocityAnimation from './animations/decaying-velocity-animation';
 import RandomWidthAnimation from './animations/random-width-animation';
 import ShakingAnimation from './animations/shaking-animation';
 import SvgCircleAnimation from './animations/svg-circle-animation';
@@ -12,7 +14,9 @@ const Sandbox = () => {
         RandomWidthAnimation,
         XTranslationAnimation,
         SvgCircleAnimation,
-        ShakingAnimation
+        ShakingAnimation,
+        CirclePanAnimation,
+        DecayingVelocityAnimation
     ]
 
     return (
