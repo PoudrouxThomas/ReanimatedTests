@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import CirclePanAnimation from './animations/circle-pan-animation';
 import DecayingVelocityAnimation from './animations/decaying-velocity-animation';
-import LoadingAnimation from './animations/loading-animations';
+import LoadingAnimation from './animations/loading-animations/loading-animations';
 import PulseButton from './animations/pulse-button-animation';
 import RandomWidthAnimation from './animations/random-width-animation';
 import ShakingAnimation from './animations/shaking-animation';
