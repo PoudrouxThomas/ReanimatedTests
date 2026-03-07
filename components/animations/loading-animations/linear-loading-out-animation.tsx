@@ -28,10 +28,7 @@ const LinearLoadingOutAnimation = ({ animatedProgress }: AnimatedLoadingProps) =
                     underlineColorAndroid="transparent"
                     editable={false}
                     value="0%"
-                    style={[styles.progressText, {
-                        fontSize: 26,
-                        color: "#8AAAFF"
-                    }]}
+                    style={styles.progressText}
                     animatedProps={animatedProps}
                 />
             </View>
@@ -63,7 +60,8 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     progressText: {
-        color: "#E6EEFF",
+        color: "#8AAAFF",
         marginRight: 10,
+        fontSize: 26
     }
 })

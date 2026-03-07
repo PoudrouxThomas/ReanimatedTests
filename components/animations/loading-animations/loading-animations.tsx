@@ -4,18 +4,22 @@ import { useSharedValue, withTiming } from 'react-native-reanimated';
 import { scheduleOnRN } from 'react-native-worklets';
 import Spacer from '../../spacer';
 import { ThemedText } from '../../themed-text';
+import CircularLoadingAnimation from './circular-loading-animation';
 import LinearLoadingInAnimation from './linear-loading-in-animation';
 import LinearLoadingOutAnimation from './linear-loading-out-animation';
 
 const LoadingAnimation = () => {
 
     const animatedProgress = useSharedValue<number>(0);
+    const isLoading = useSharedValue<boolean>(false);
 
     const simulateLoading = () => {
         animatedProgress.value = 0;
+        isLoading.value = true;
 
         const nextStep = () => {
-            if (animatedProgress.value >= 100) return;
+            if (animatedProgress.value >= 100)
+                return;
 
             const nextValue = Math.min(animatedProgress.value + Math.random() * 20, 100);
             const duration = Math.random() * 800 + 200;
@@ -23,6 +27,8 @@ const LoadingAnimation = () => {
             animatedProgress.value = withTiming(nextValue, { duration }, (finished) => {
                 if (finished && nextValue < 100) {
                     scheduleOnRN(nextStep);
+                } else if (finished) {
+                    isLoading.value = false;
                 }
             })
         }
@@ -37,6 +43,8 @@ const LoadingAnimation = () => {
             <LinearLoadingOutAnimation animatedProgress={animatedProgress} />
             <Spacer />
             <LinearLoadingInAnimation animatedProgress={animatedProgress} />
+            <Spacer />
+            <CircularLoadingAnimation animatedProgress={animatedProgress} isLoading={isLoading} />
 
             < Button onPress={simulateLoading} title="Start loading" />
         </View >
