@@ -46,7 +46,7 @@ const LoadingAnimation = () => {
             <Spacer />
             <CircularLoadingAnimation animatedProgress={animatedProgress} isLoading={isLoading} />
 
-            < Button onPress={simulateLoading} title="Start loading" />
+            <Button onPress={simulateLoading} title="Start loading" />
         </View >
     )
 }

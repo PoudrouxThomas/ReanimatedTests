@@ -1,5 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
+import CardSwipeAnimation from './animations/card-swipe-animation';
 import CirclePanAnimation from './animations/circle-pan-animation';
 import DecayingVelocityAnimation from './animations/decaying-velocity-animation';
 import LoadingAnimation from './animations/loading-animations/loading-animations';
@@ -20,7 +21,8 @@ const Sandbox = () => {
         CirclePanAnimation,
         DecayingVelocityAnimation,
         PulseButton,
-        LoadingAnimation
+        LoadingAnimation,
+        CardSwipeAnimation
     ]
 
     return (
